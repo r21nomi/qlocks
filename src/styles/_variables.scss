@@ -1,0 +1,108 @@
+@function rem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+// color
+$transparent: transparent;
+$white_fff: #ffffff;
+$black_000: #000;
+$gray_aaa: #aaa;
+$gray_ccc: #ccc;
+$gray_ddd: #ddd;
+$gray_eee: #eee;
+$red_ff0000: #ff0000;
+$blue_0000ff: #0000ff;
+$blue_0055bb: #0055bb;
+$black_000_opa30: rgba($black_000, 30%);
+$black_000_opa60: rgba($black_000, 60%);
+
+$accent_color: #001EFF;
+$sub_accent_color: $black_000;
+$bg_color: $gray_eee;
+$primary_text_color: $black_000;
+$accent_text_color: $accent_color;
+$error_text_color: $red_ff0000;
+$border_color: $gray_aaa;
+$art_color: $red_ff0000;
+$ad_color: $blue_0000ff;
+$modal_bg: $black_000_opa60;
+$link_color: $blue_0055bb;
+
+// font
+$font_size_10: rem(10);
+$font_size_12: rem(12);
+$font_size_14: rem(14);
+$font_size_16: rem(16);
+$font_size_18: rem(18);
+$font_size_20: rem(20);
+$font_size_22: rem(22);
+$font_size_24: rem(24);
+$font_size_28: rem(28);
+$font_size_30: rem(30);
+$font_size_32: rem(32);
+$font_size_36: rem(36);
+$font_size_40: rem(40);
+$font_size_44: rem(44);
+$font_size_48: rem(48);
+$font_size_56: rem(56);
+$font_size_64: rem(64);
+$font_size_84: rem(84);
+$font_size_96: rem(96);
+
+// Font Weight
+$font_weight_normal: 400;
+$font_weight_bold: 700;
+$font_weight_black: 900;
+
+// Margin
+$margin_4: 4px;
+$margin_8: 8px;
+$margin_12: 12px;
+$margin_16: 16px;
+$margin_20: 20px;
+$margin_24: 24px;
+$margin_32: 32px;
+$margin_40: 40px;
+$margin_48: 48px;
+$margin_64: 64px;
+$margin_80: 80px;
+$margin_96: 96px;
+$margin_120: 120px;
+
+// Padding
+$padding_4: 4px;
+$padding_8: 8px;
+$padding_12: 12px;
+$padding_16: 16px;
+$padding_20: 20px;
+$padding_24: 24px;
+$padding_32: 32px;
+$padding_40: 40px;
+$padding_48: 48px;
+$padding_56: 56px;
+$padding_64: 64px;
+$padding_80: 80px;
+$padding_96: 96px;
+$padding_128: 128px;
+
+// Z-index
+$z_index_background: -1;
+$z_index_header: 100;
+$z_index_menu: 200;
+$z_index_modal: 300;
+$z_index_loading: 400;
+
+// Border radius
+$border-radius_2: 2px;
+$border-radius_4: 4px;
+$border-radius_8: 8px;
+$border-radius_12: 12px;
+$border-radius_16: 16px;
+$border-radius_50per: 50%;
+
+// Component value
+$pc_header_height: 149px;
+$mobile_header_height: 64px;
+$contents_width: 1222px;
+$pc_logo_height: 90px;
+$sp_logo_height: 30px;
