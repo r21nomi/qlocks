@@ -24,7 +24,7 @@ void main() {
     vec2 ratio = vResolution / min(vResolution.x, vResolution.y);
 
     float shapeH = 0.015;
-    float shapeMargin = 0.02;
+    float shapeMargin = ratio.y * shapeH * 4.0;
     vec2 shapeUv = uv;
     shapeUv.y -= (shapeH * 2.0 + shapeMargin);
 
