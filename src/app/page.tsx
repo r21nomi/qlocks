@@ -1,7 +1,12 @@
+'use client'
+
 import styles from '@/styles/TopPage.module.scss'
 import ArtIframe from '@/components/artIframe/ArtIframe'
+import { useArts } from '@/hooks/contexts/artsContext'
+import Menu from '@/components/menu/Menu'
 
 export default function Home() {
+  const { arts, currentIndex } = useArts()
   const isLocal = () => {
     if (typeof window !== 'undefined') {
       console.log(window.location.hostname)
@@ -14,11 +19,12 @@ export default function Home() {
   }
   const url = isLocal()
     ? `http://localhost:8080`
-    : `/arts/20250321/public/index.html`
+    : `/arts/${arts[currentIndex].file}`
 
   return (
     <div className={styles.root}>
       <ArtIframe className={styles.art} url={url} />
+      <Menu className={styles.menu} />
     </div>
   )
 }
