@@ -17,6 +17,10 @@ const defaultContext: IArtsContext = {
       title: 'qlock3 - Sunrise',
       file: '20250603/public/index.html',
     },
+    {
+      title: 'qlock4',
+      file: '20260120/public/index.html',
+    },
   ],
   currentIndex: 0,
   setIndex: () => {},
