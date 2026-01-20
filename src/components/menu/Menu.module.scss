@@ -2,10 +2,15 @@
 @import '@/styles/mixin';
 
 .root {
-  padding: $padding_8;
+  display: flex;
+  flex-direction: column;
+  gap: $padding_4;
+  padding: $padding_4;
 
   .item {
+    font-size: $font_size_12;
     cursor: pointer;
-    padding: $padding_4;
+    padding: $padding_4 $padding_8;
+    background: $gray_eee;
   }
 }
