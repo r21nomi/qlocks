@@ -9,6 +9,10 @@ export default function Home() {
   const { arts, currentIndex } = useArts()
   const isLocal = () => {
     if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      if (params.get('dev') === 'false') {
+        return false
+      }
       console.log(window.location.hostname)
       return (
         window.location.hostname === 'localhost' ||
