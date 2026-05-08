@@ -4,9 +4,24 @@ import styles from '@/styles/TopPage.module.scss'
 import ArtIframe from '@/components/artIframe/ArtIframe'
 import { useArts } from '@/hooks/contexts/artsContext'
 import Menu from '@/components/menu/Menu'
+import { useEffect } from 'react'
 
 export default function Home() {
-  const { arts, currentIndex } = useArts()
+  const { arts, currentIndex, setIndex } = useArts()
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      const id = params.get('id')
+
+      if (id) {
+        const index = arts.findIndex((art) => art.id === id)
+        if (index !== -1) {
+          setIndex(index)
+        }
+      }
+    }
+  }, [])
   const isLocal = () => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search)
