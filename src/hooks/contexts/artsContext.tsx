@@ -2,35 +2,10 @@
 
 import { createContext, useContext, useMemo, useState } from 'react'
 import { IArtsContext } from '@/types/context'
+import { getArts } from '@/utils/arts'
 
 const defaultContext: IArtsContext = {
-  arts: [
-    {
-      id: 'qlock1',
-      title: 'qlock1',
-      file: '20250321/public/index.html',
-    },
-    {
-      id: 'qlock2',
-      title: 'qlock2',
-      file: '20250429/public/index.html',
-    },
-    {
-      id: 'qlock3',
-      title: 'qlock3 - Sunrise',
-      file: '20250603/public/index.html',
-    },
-    {
-      id: 'qlock4',
-      title: 'qlock4',
-      file: '20260120/public/index.html',
-    },
-    {
-      id: 'qlock5',
-      title: 'qlock5',
-      file: '20260127/public/index.html',
-    },
-  ],
+  arts: getArts(),
   currentIndex: 0,
   setIndex: () => {},
 }
